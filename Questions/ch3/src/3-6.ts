@@ -1,14 +1,19 @@
+export enum Type {
+  Cat = 'cat',
+  Dog = 'dog'
+}
+
 export default class AnimalQueue {
 
   private animals: string[];
-  private types: string[];
+  private types: Type[];
 
   constructor() {
     this.animals = [];
     this.types = [];
   }
 
-  enqueue(animal: string, type: string): void {
+  enqueue(animal: string, type: Type): void {
     this.animals.push(animal);
     this.types.push(type);
   }
@@ -19,13 +24,13 @@ export default class AnimalQueue {
   }
 
   dequeueDog(): string {
-    const index: number = this.types.indexOf('dog');
+    const index: number = this.types.indexOf(Type.Dog);
     this.types.splice(index, 1);
     return this.animals.splice(index, 1).join('');
   }
 
   dequeueCat(): string {
-    const index: number = this.types.indexOf('cat');
+    const index: number = this.types.indexOf(Type.Cat);
     this.types.splice(index, 1);
     return this.animals.splice(index, 1).join('');
   }

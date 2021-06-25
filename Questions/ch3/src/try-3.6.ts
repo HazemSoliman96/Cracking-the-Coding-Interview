@@ -1,16 +1,16 @@
-import AnimalQueue from './3-6';
+import AnimalQueue, { Type } from './3-6';
 
 let animalqueue: AnimalQueue = new AnimalQueue();
 
-animalqueue.enqueue('dog1', 'dog');
-animalqueue.enqueue('cat1', 'cat');
+animalqueue.enqueue('dog1', Type.Dog);
+animalqueue.enqueue('cat1', Type.Cat);
 //console.log(animalqueue);
-animalqueue.enqueue('cat2', 'cat');
-animalqueue.enqueue('dog2', 'dog');
-animalqueue.enqueue('dog3', 'dog');
-animalqueue.enqueue('cat3', 'cat');
-animalqueue.enqueue('dog4', 'dog');
-animalqueue.enqueue('cat4', 'cat');
+animalqueue.enqueue('cat2', Type.Cat);
+animalqueue.enqueue('dog2', Type.Dog);
+animalqueue.enqueue('dog3', Type.Dog);
+animalqueue.enqueue('cat3', Type.Cat);
+animalqueue.enqueue('dog4', Type.Dog);
+animalqueue.enqueue('cat4', Type.Cat);
 //console.log(animalqueue);
 
 console.log(animalqueue.dequeueAny());
